@@ -1,0 +1,21 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.maintain-padding{
+  padding-left: 15px;
+  padding-right:15px;
+}
+
+#founders-pic{
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 5px;
+}
+
+.founder-pic{
+  padding: 10px;
+}
+
+.italic{
+  font-style: italic;
+}

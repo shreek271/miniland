@@ -1,0 +1,33 @@
+.row{style: "margin:0px;padding: 15px 10px 0px 10px; position: relative;"}
+  .col-sm-7{style: "display: flex; padding: 0px;"}
+    #school-logo
+      = link_to image_tag("logo.png", style: "max-width: 100px; max-height: 80px; width: auto; height: auto;", id: "logo"), root_path
+    #school-name{style: "color: #ffffff; margin-left: 5px; padding: 5px;"}
+      %h1{style: "margin: 0px;"}
+        MINILAND
+        %span{style: "text-transform: none;display: block;font-family: 'latolight';font-size: 70%;"}
+          English Secondary School
+  .col-sm-5.header-links{style: "color: #ffffff; padding: 20px;margin-top: 20px;"}
+    %ul.header-list{style: "margin-top: 10px; padding: 0px; margin-left: 10px; font-size: 14px;"}
+      %li{style: "display: inline;padding: 5px;"} Home
+      %li{style: "display: inline;padding: 5px;"} Teachers
+      %li{style: "display: inline;padding: 5px;"} Students
+      %li{style: "display: inline;padding: 5px;"} Facilities
+
+
+/ .inside-padding{style: "padding: 20px 10px 20px 10px; position: relative;"}
+/   .left-header{style: "width: 65%"}
+/     #school-logo{style: "width: 15%; float: left"}
+/       = link_to image_tag("logo.png", style: "max-width: 100px; max-height: 80px; width: auto; height: auto;"), root_path
+/     #school-name{style: "width: 85%; float: left; color: #ffffff"}
+/       %h1{style: "margin: 0px;"}
+/         MINILAND
+/         %span{style: "text-transform: none;display: block;font-family: 'latolight';font-size: 70%;"} English Secondary School
+/   .right-header{style: "float:right; color: #ffffff;"}
+/     %ul{style: "margin-top: 10px; padding: 0px; margin-left: 10px; font-size: 14px;"}
+/       %li{style: "display: inline;padding: 5px;"} Home
+/       %li{style: "display: inline;padding: 5px;"} Faculty
+/       %li{style: "display: inline;padding: 5px;"} Students
+/       %li{style: "display: inline;padding: 5px;"} Facilities
+/     .div-phone{style: "color: #ffffff;margin: 9px 0px 0px;text-align: right;font-size: 19px;font-weight: 700;"}
+/       = 123456788

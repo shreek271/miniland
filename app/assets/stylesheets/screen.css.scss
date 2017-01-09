@@ -1,0 +1,78 @@
+
+@media (min-width: 1200px) {
+  .header-list{
+    padding-left: 200px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+   .header-list{
+    padding-left: 110px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .header-list{
+    padding-left: 20px !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  #header{
+    height: 150px;
+  }
+
+  h1{
+    font-size: 24px !important;
+  }
+
+  #logo{
+    max-width: 75px !important;
+    max-height: 55px !important;
+  }
+
+  #school-name{
+    padding: 5px;
+  }
+
+  .header-links{
+    padding: 0px !important;
+    margin-top: 0px !important;
+  }
+
+  .header-list{
+    padding-left: 0px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  
+}
+
+@media (max-width: 374px) {
+  #header{
+    height: 150px;
+  }
+
+  h1{
+    font-size: 24px !important;
+  }
+
+  #logo{
+    max-width: 75px !important;
+    max-height: 55px !important;
+  }
+
+  #school-name{
+    padding: 5px;
+  }
+
+  .header-links{
+    padding: 0px !important;
+    margin-top: 0px !important;
+  }
+
+  .header-list{
+    padding-left: 0px !important;
+  }
+}

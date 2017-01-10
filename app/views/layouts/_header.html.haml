@@ -7,12 +7,20 @@
         MINILAND
         %span{style: "text-transform: none;display: block;font-family: 'latolight';font-size: 70%;"}
           English Secondary School
-  .col-sm-5.header-links{style: "color: #ffffff; padding: 20px;margin-top: 20px;"}
-    %ul.header-list{style: "margin-top: 10px; padding: 0px; margin-left: 10px; font-size: 14px;"}
-      %li{style: "display: inline;padding: 5px;"} Home
-      %li{style: "display: inline;padding: 5px;"} Teachers
-      %li{style: "display: inline;padding: 5px;"} Students
-      %li{style: "display: inline;padding: 5px;"} Facilities
+  -if teacher_signed_in?
+    .col-sm-5.header-links{style: "color: #ffffff; padding: 20px;margin-top: 20px;"}
+      %ul.header-list{style: "margin-top: 10px; padding: 0px; margin-left: 10px; font-size: 14px;"}
+        %li{style: "display: inline;padding: 5px;"} Notices
+        %li{style: "display: inline;padding: 5px;"} Teachers
+        %li{style: "display: inline;padding: 5px;"} Students
+        %li{style: "display: inline;padding: 5px;"}= link_to 'Logout', destroy_teacher_session_path, method: :delete
+  -else
+    .col-sm-5.header-links{style: "color: #ffffff; padding: 20px;margin-top: 20px;"}
+      %ul.header-list{style: "margin-top: 10px; padding: 0px; margin-left: 10px; font-size: 14px;"}
+        %li{style: "display: inline;padding: 5px;"} Home
+        %li{style: "display: inline;padding: 5px;"} Teachers
+        %li{style: "display: inline;padding: 5px;"} Students
+        %li{style: "display: inline;padding: 5px;"} Facilities
 
 
 / .inside-padding{style: "padding: 20px 10px 20px 10px; position: relative;"}

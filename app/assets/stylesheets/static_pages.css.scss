@@ -19,3 +19,27 @@
 .italic{
   font-style: italic;
 }
+
+.green-form-page{
+  background-color: #76b852;
+  margin: 0px;
+}
+
+.init-form{
+  background-color: white;
+  padding: 25px;
+  margin-top: 5%;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+.init-form-header{
+  h3{
+    margin-top: 0px;
+    margin-bottom: 25px ;
+  }
+}
+
+#error_explanation{
+  color: red;
+}

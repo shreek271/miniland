@@ -1,0 +1,20 @@
+- provide(:title, "New Teacher")
+.row.green-form-page
+  .col-md-12
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .col-md-4.col-md-offset-4.init-form
+        .init-form-header.text-center
+          %h3 Register
+        = devise_error_messages!
+        .form-group
+          = f.email_field :email, class: "form-control", placeholder: "Email"
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %div
+            Currently waiting confirmation for: #{resource.unconfirmed_email}
+        .form-group
+          = f.password_field :password,class: "form-control", autocomplete: "off", placeholder: "Password"
+        .form-group
+          = f.password_field :password_confirmation, class: "form-control", autocomplete: "off", placeholder: "Confirm Password"
+        .form-group
+          = f.submit "Register", class: " form-control btn btn-success btn-sm"
+        = render "devise/shared/links"

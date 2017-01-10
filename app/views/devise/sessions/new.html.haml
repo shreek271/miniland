@@ -1,0 +1,18 @@
+.row.green-form-page
+  .col-md-12
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .col-md-4.col-md-offset-4.init-form
+        .init-form-header.text-center
+          %h3 Log In
+        .form-group
+          = f.email_field :email, class: "form-control", autofocus: true, placeholder: "Email"
+        .form-group
+          = f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "Password"
+        - if devise_mapping.rememberable?
+          .form-group
+            = f.check_box :remember_me
+            = f.label :remember_me
+        .form-group
+          = f.submit "Log In", class: "btn btn-success form-control"
+        = render "devise/shared/links"
+

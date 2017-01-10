@@ -14,6 +14,10 @@
       #header{style: "height: 115px; border-bottom-style: solid;background: #093349;"}
         = render 'layouts/header'
       #main-body{style: "font-family: 'latoregular'; line-height: 23px; letter-spacing: .3px; font-size: 16px;"}
+        - flash.each do |message_type, message|
+          %div{:class => "super-alert alert #{flash_class(message_type) unless message.blank?}"}
+            %a.close{"aria-label" => "close", "data-dismiss" => "alert", href: "#", title: "close"} ×
+            = message
         = yield
       #footer
         = render 'layouts/footer'

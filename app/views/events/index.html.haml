@@ -1,0 +1,8 @@
+- provide(:title, "All Events")
+.row.green-form-page
+  - @events.each do |event|
+    .col-md-3.element-box
+      = link_to event.name, event_path(event.id)
+      %p= truncate(event.description, length: 100)
+      - if teacher_signed_in?
+        = link_to "update", edit_event_path(event.id), class: "btn btn-primary btn-xs"

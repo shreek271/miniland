@@ -1,3 +1,14 @@
 - provide(:title, "Dashboard")
-%h3= link_to "edit", edit_teacher_registration_path, class: "btn btn-primary"
-%h3= link_to "new", new_teacher_registration_path, class: "btn btn-primary"
+.row.green-form-page
+  .col-md-3.dashboard-box
+    %h3 Teachers
+    = link_to "edit", edit_teacher_registration_path, class: "btn btn-primary"
+    = link_to "new", new_teacher_registration_path, class: "btn btn-primary"
+  .col-md-3.dashboard-box
+    %h3 Events
+    = link_to "Events", events_path, class: "btn btn-primary"
+    = link_to "Add Event", new_event_path, class: "btn btn-primary"
+  .col-md-3.dashboard-box
+    %h3 Notices
+    = link_to "Notices", notices_path, class: "btn btn-primary"
+    = link_to "Add Notice", new_notice_path, class: "btn btn-primary"

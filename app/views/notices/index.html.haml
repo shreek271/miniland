@@ -1,0 +1,8 @@
+- provide(:title, "All Notices")
+.row.green-form-page
+  - @notices.each do |notice|
+    .col-md-3.element-box
+      = link_to notice.name, notice_path(notice.id)
+      %p= truncate(notice.description, length: 100)
+      - if teacher_signed_in?
+        = link_to "update", edit_notice_path(notice.id), class: "btn btn-primary btn-xs"

@@ -1,0 +1,2 @@
+class EventAttachmentsController < ApplicationController
+end

@@ -19,5 +19,14 @@
             %a.close{"aria-label" => "close", "data-dismiss" => "alert", href: "#", title: "close"} ×
             = message
         = yield
-      #footer
-        = render 'layouts/footer'
+    #footer
+      = render 'layouts/footer'
+
+:javascript
+  $(".super-alert").delay(5000).slideUp(1000);
+  $(document).ready(function(){
+    if( "#{teacher_signed_in?}"){
+      $("#whole-layout").css("background-color", "#76b852")
+    }
+    
+  });

@@ -1,0 +1,9 @@
+- provide(:title, "#{@event.name}")
+.row.green-form-page
+  .col-md-10.element-box
+    %h3=@event.name
+    %p= @event.description
+.row.green-form-page
+  - @event.event_attachments.each do |attachment|
+    .col-md-3.element-box
+      = image_tag(attachment.picture.url, class: "img-responsive event-pictures")

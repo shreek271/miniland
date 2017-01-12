@@ -11,7 +11,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     #whole-layout
-      #header{style: "height: 115px; border-bottom-style: solid;background: #093349;"}
+      #header{style: "height: 115px; border-bottom-style: solid; background: #093349;"}
         = render 'layouts/header'
       #main-body{style: "font-family: 'latoregular'; line-height: 23px; letter-spacing: .3px; font-size: 16px;"}
         - flash.each do |message_type, message|
@@ -28,5 +28,4 @@
     if( "#{teacher_signed_in?}"){
       $("#whole-layout").css("background-color", "#76b852")
     }
-    
   });

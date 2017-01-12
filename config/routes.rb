@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   
   resources :events
   resources :notices
-  resources :teachers
+  resources :faculties
 end

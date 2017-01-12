@@ -2,8 +2,9 @@
 .row.green-form-page
   .col-md-3.dashboard-box
     %h3 Teachers
-    = link_to "edit", edit_teacher_registration_path, class: "btn btn-primary"
-    = link_to "new", new_teacher_registration_path, class: "btn btn-primary"
+    /= link_to "edit", edit_teacher_registration_path, class: "btn btn-primary"
+    = link_to "Teachers", faculties_path, class: "btn btn-primary"
+    = link_to "new", new_faculty_path, class: "btn btn-primary"
   .col-md-3.dashboard-box
     %h3 Events
     = link_to "Events", events_path, class: "btn btn-primary"

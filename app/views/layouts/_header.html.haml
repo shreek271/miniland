@@ -10,9 +10,9 @@
   -if teacher_signed_in?
     .col-sm-5.header-links{style: "color: #ffffff; padding: 20px;margin-top: 20px;"}
       %ul.header-list{style: "margin-top: 10px; padding: 0px; margin-left: 10px; font-size: 14px;"}
-        %li{style: "display: inline;padding: 5px;"} Notices
-        %li{style: "display: inline;padding: 5px;"} Teachers
-        %li{style: "display: inline;padding: 5px;"} Students
+        %li{style: "display: inline;padding: 5px;"}= link_to "Notices", notices_path
+        %li{style: "display: inline;padding: 5px;"}= link_to "Events", events_path
+        %li{style: "display: inline;padding: 5px;"}= link_to "Teachers", faculties_path
         %li{style: "display: inline;padding: 5px;"}= link_to 'Logout', destroy_teacher_session_path, method: :delete
   -else
     .col-sm-5.header-links{style: "color: #ffffff; padding: 20px;margin-top: 20px;"}
@@ -20,7 +20,7 @@
         %li{style: "display: inline;padding: 5px;"}= link_to "Home", root_path
         %li{style: "display: inline;padding: 5px;"}= link_to "Notices", notices_path
         %li{style: "display: inline;padding: 5px;"}= link_to "Events", events_path
-        %li{style: "display: inline;padding: 5px;"}= link_to "teachers", teachers_path
+        %li{style: "display: inline;padding: 5px;"}= link_to "Teachers", faculties_path
 
 
 / .inside-padding{style: "padding: 20px 10px 20px 10px; position: relative;"}

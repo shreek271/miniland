@@ -1,0 +1,15 @@
+- provide(:title, "All Notices")
+.row.green-form-page
+  - @faculties.each do |faculty|
+    .col-md-3.element-box{style: "display: flex"}
+      .div{style: "width: 75%;"}
+        = link_to faculty.name, faculty_path(faculty.id)
+        %br
+        %span= faculty.subject
+        %br
+        %span= faculty.qualification
+        %br
+        - if teacher_signed_in?
+          = link_to "update", edit_faculty_path(faculty.id), class: "btn btn-primary btn-xs"
+      .div{style: "width: 25%;"}
+        = image_tag(faculty.picture.url, class: "img-responsive", style: "height: 75px; width: 75px;")

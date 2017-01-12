@@ -1,9 +1,8 @@
-- provide(:title, "Edit Teacher")
-.container-fluid
-  %h3
-    Edit #{resource_name.to_s.humanize}
-  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-    = devise_error_messages!
+= form_for(@faculty, html: { role: "form" }) do |f|
+  .init-form
+    .init-form-header.text-center
+      %h3 New Teacher
+    =render_errors(@faculty)
     .row
       .col-md-4
         .form-group
@@ -14,9 +13,6 @@
           = f.label :email
           %br/
           = f.email_field :email, class: "form-control"
-        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-          %div
-            Currently waiting confirmation for: #{resource.unconfirmed_email}
         .form-group
           = f.label :address
           %br/
@@ -53,24 +49,5 @@
     .row
       .col-md-4
         .form-group
-          = f.label :password
-          %i (leave blank if you don't want to change it)
-          %br/
-          = f.password_field :password, class: "form-control", autocomplete: "off"
-        .form-group
-          = f.label :password_confirmation
-          %br/
-          = f.password_field :password_confirmation, class: "form-control", autocomplete: "off"
-        .form-group
-          = f.label :current_password
-          %i (we need your current password to confirm your changes)
-          %br/
-          = f.password_field :current_password, class: "form-control", autocomplete: "off"
-    .row
-      .col-md-4
-        .form-group
-          = f.submit "Update", class: "btn btn-sm btn-success"
-  %h3 Cancel my account
-  %p
-    #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+          = f.submit "Submit", class: "btn btn-sm btn-success"
   /= link_to "Back", :back, class: "btn btn-sm btn-primary"

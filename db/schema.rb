@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111100925) do
+ActiveRecord::Schema.define(version: 20170112095157) do
 
   create_table "event_attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer  "event_id"
@@ -29,6 +29,23 @@ ActiveRecord::Schema.define(version: 20170111100925) do
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "faculties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "qualification"
+    t.string   "experience"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.string   "subject"
   end
 
   create_table "notices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
@@ -51,14 +68,7 @@ ActiveRecord::Schema.define(version: 20170111100925) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name"
-    t.string   "gender"
     t.string   "subject"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "qualification"
-    t.string   "experience"
-    t.string   "picture"
     t.index ["email"], name: "index_teachers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true, using: :btree
   end

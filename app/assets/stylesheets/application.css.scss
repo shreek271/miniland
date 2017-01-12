@@ -18,13 +18,17 @@
 @import "bootstrap";
 
 html, body {
-  height: 100% !important;
+  height: 100%;
 }
 
 #whole-layout{
-  min-height: 85%;
+  min-height: 87%;
 }
 
 #footer {
-
+  background: #093349;
+  color: white;
+}
+.footer{
+  margin: 0px !important; 
 }
